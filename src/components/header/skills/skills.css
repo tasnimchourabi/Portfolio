@@ -1,0 +1,86 @@
+/* Container for the Skills Section */
+.skills_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns for FrontEnd and Backend */
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* General Content Box Styling */
+  .skills_content {
+    background-color: var(--container-color);
+    border: 1px solid black;
+    padding: 2rem 4rem;
+    border-radius: 1.25rem;
+    width: 100%;
+    max-width: 400px; 
+    box-sizing: border-box; 
+  }
+  
+  /* Title Styling */
+  .skills_title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Layout for the Skills Items */
+  .skills_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; 
+    align-items: start;
+  }
+  
+  /* Styling for each Skill Item */
+  .skills_data {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Skill Name */
+  .skills_name {
+    font-size: 1rem;
+    font-weight: bold;
+
+  }
+  
+  /* Skill Level */
+  .skills_level {
+    font-size: 0.875rem;
+    color: gray;
+
+  }
+  /* ============breakpoints=========== */
+/* for large device */
+@media  screen and (max-width: 992px) {
+   .skills_container{
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+   }
+   
+  }
+  
+  /* for medium device */
+  @media screen and (max-width: 576px) {
+   .skills_container{
+    grid-template-columns: 1fr ;
+    margin-left: 2rem;
+   }
+   .skills_content{
+    padding: 1.5rem;
+   }
+  }
+  /* for small devices */
+  @media screen and (max-width: 350px){
+    
+    .skills_container{
+        column-gap: 1.25rem;
+    }
+    .skills_name{
+        font-size: var(--small-font-size);
+    }
+  }
